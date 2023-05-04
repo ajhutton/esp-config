@@ -4,21 +4,20 @@ substitutions:
 
 esphome:
   name: "${name}"
-  # Automatically add the mac address to the name
+    # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
   name_add_mac_suffix: true
 
   # This will allow for (future) project identification,
   # configuration and updates.
   project:
-    name: arlecald095ha
-    version: "1.0"
+    name: alex.arlec-ald095ha
+    version: "1.2"
 
 # This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://ajhutton/esp-config/arlec-ald095ha.yaml@main
-  import_full_config: true # or true
-
+  package_import_url: github://ajhutton/esp-config/arlec-ald095ha.yaml
+  #import_full_config: true # or true
 
 libretiny:
   board: wb2s
@@ -40,7 +39,7 @@ wifi:
 
   # Enable fallback hotspot in case wifi connection fails
   ap:
-    ssid: "$devicename-fallback"
+    ssid: "${name}-fallback"
 
 captive_portal:
 
