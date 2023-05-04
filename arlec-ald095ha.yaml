@@ -18,9 +18,6 @@ esphome:
 dashboard_import:
   package_import_url: github://ajhutton/esp-config/arlec-ald095ha.yaml@main
 
-esphome:
-  name: $devicename
-
 libretuya:
   board: wb2s
   framework:
